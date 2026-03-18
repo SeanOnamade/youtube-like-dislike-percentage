@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Like %",
+  "version": "1.1.0",
+  "description": "Shows the like percentage next to the video title, with optional like-count coloring.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://returnyoutubedislikeapi.com/*"],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/watch*", "*://youtube.com/watch*"],
+      "js": ["lib.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}

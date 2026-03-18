@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    width: 240px;
+    padding: 16px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 13px;
+    color: #e8eaed;
+    background: #282828;
+  }
+  h1 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+    color: #fff;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  label { cursor: pointer; }
+
+  /* Toggle switch */
+  .toggle {
+    position: relative;
+    width: 36px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  .toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .slider {
+    position: absolute;
+    inset: 0;
+    background: #555;
+    border-radius: 10px;
+    transition: background 0.2s;
+    cursor: pointer;
+  }
+  .slider::before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: transform 0.2s;
+  }
+  .toggle input:checked + .slider {
+    background: #3ea6ff;
+  }
+  .toggle input:checked + .slider::before {
+    transform: translateX(16px);
+  }
+</style>
+</head>
+<body>
+  <h1>YouTube Like %</h1>
+  <div class="row">
+    <label for="colorToggle">Color like count</label>
+    <div class="toggle">
+      <input type="checkbox" id="colorToggle">
+      <span class="slider"></span>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "youtube-like-dislike-percentage",
+  "version": "1.0.0",
+  "description": "A minimal Chrome extension that shows the **like percentage** on YouTube watch pages.",
+  "main": "content.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^4.1.0"
+  }
+}
