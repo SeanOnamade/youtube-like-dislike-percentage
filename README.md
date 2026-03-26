@@ -1,12 +1,14 @@
 # YouTube Like %
 
-A minimal Chrome extension that shows the **like percentage** next to the video title on YouTube watch pages, with optional like-count coloring.
+A minimal Chrome extension that shows the **like-to-dislike ratio** as a percentage — `likes / (likes + dislikes)` — next to the video title on YouTube, with optional like-count coloring.
+
+**[Install from the Chrome Web Store](https://chromewebstore.google.com/detail/youtube-like-%/doinneiomfncgaonbokfkccajlnlamih)**
 
 ![High ratio example — 99.8% in green](screenshots/high-ratio-colored.png)
 
 ## Features
 
-- **Like percentage** (e.g. "99.8%") appears next to the video title via a CSS `::after` pseudo-element — no DOM injection, no layout shifts.
+- **Like ratio percentage** — computes `likes / (likes + dislikes)` and displays the result (e.g. "99.8%") next to the video title. Uses a CSS `::after` pseudo-element — no DOM injection, no layout shifts.
 - **Color-coded like count** — optionally colors the like count text on a green-to-red gradient based on the ratio (toggle via the extension popup, off by default).
 - **Color-coded percentage** — when coloring is enabled, the percentage text itself is also colored to match.
 - Uses the [Return YouTube Dislike API](https://returnyoutubedislike.com/) — works with or without the RYD extension installed.
@@ -26,6 +28,12 @@ A minimal Chrome extension that shows the **like percentage** next to the video 
 | ![Color on](screenshots/despacito-colored.png) | ![Color off](screenshots/color-off.png) |
 
 ## Install
+
+### Chrome Web Store
+
+**[Install YouTube Like %](https://chromewebstore.google.com/detail/youtube-like-%/doinneiomfncgaonbokfkccajlnlamih)** — one click, automatic updates.
+
+### Manual / development
 
 1. Clone or download this repo.
 2. Open Chrome and go to `chrome://extensions`.
